@@ -85,6 +85,7 @@ public class MyHashMap<K, V> {
     }
 
     public int size() {
+
         return count;
     }
 
@@ -92,7 +93,8 @@ public class MyHashMap<K, V> {
         for (int i = 0; i < nodes.length; i++) {
             nodes[i] = null;
         }
-        this.size = 0;
+
+        size = 0;
     }
 
     @Override
