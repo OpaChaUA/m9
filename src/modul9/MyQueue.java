@@ -1,4 +1,5 @@
 package modul9;
+
 import java.util.Objects;
 import java.util.Queue;
 
@@ -19,35 +20,38 @@ public class MyQueue<T> {
 
     public void add(T element) {
         Node<T> newNode = new Node<>(element);
-        if(first==null){
-            first=last=newNode;
-        }else {
-            last.next =newNode;
-            last=newNode;
+        if (first == null) {
+            first = last = newNode;
+        } else {
+            last.next = newNode;
+            last = newNode;
         }
         size++;
     }
-    public void clear (){
-        first=null;
-        last=null;
-        size=0;
+
+    public void clear() {
+        first = null;
+        last = null;
+        size = 0;
     }
 
     public int size() {
         return size;
     }
-    public T peek(){
+
+    public T peek() {
         return first.element;
     }
-    public T pool(){
-        T firstItem= first.element;
-        first=first.next;
+
+    public T pool() {
+        T firstItem = first.element;
+        first = first.next;
         size--;
         return firstItem;
     }
 
     public T get(int index) {
-        Objects.checkIndex(index,size);
+        Objects.checkIndex(index, size);
         Node<T> current = first;
         for (int i = 1; i <= index; i++) {
             current = current.next;
