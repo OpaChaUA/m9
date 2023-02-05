@@ -8,6 +8,7 @@ public class MyStack<T> {
         T element;
 
         public Node(T element) {
+
             this.element = element;
         }
     }
@@ -66,7 +67,6 @@ public class MyStack<T> {
 
     public T pool() {
         T lastItem = last.element;
-        last = last.next;
         size--;
         return lastItem;
     }

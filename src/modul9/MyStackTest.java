@@ -17,5 +17,12 @@ public class MyStackTest {
         System.out.println("myStack.remove(2) = " + myStack.remove(2));
         myStack.clear();
         System.out.println("Clea size= " +myStack.size());
+        for (int i = 0; i <=60; i++) {
+            myStack.push(i);
+        }
+            System.out.println("myStack.peek() = " + myStack.peek());
+            System.out.println("myStack.peek() = " + myStack.peek());
+
+        }
     }
-}
+
